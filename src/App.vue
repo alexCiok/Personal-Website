@@ -1,16 +1,19 @@
 <template>
-  <navigationComp/> 
+  <navigationComp/>
+  <introComp></introComp>
   <router-view
   ></router-view>
 </template>
 
 <script>
-import navigationComp from '@/components/navigationComp.vue';
+import introComp from '@/components/introComp.vue'
 
+import navigationComp from '@/components/navigationComp.vue';
 export default {
   name: 'App',
   components: {
-    navigationComp
+    navigationComp,
+    introComp,
   },
   data(){
     return({
@@ -30,7 +33,6 @@ html{scroll-behavior:smooth}
   padding: 0;
   box-sizing: border-box;
 }
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

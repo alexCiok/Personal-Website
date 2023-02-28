@@ -44,7 +44,7 @@ img{
     font-size: 1.5rem;;
     padding: 1ch 1.5ch;
     border-radius: 15px;
-    background-color: blue;
+    background-color: rgb(79, 214, 176);
     color: white;
 }
 button:hover{

@@ -54,7 +54,8 @@
 <style scoped>
 .nav-container{
     display: flex;
-    height: 7vh;
+    height: 10vh;
+    position: sticky;
     align-items: center;
     color: white;
     background-color: rgb(0, 0, 0);

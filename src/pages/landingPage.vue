@@ -16,7 +16,7 @@ import projectsComp from '@/components/projectsComp.vue'
         name: 'landingPage',
         components: {
             welcomeComp,
-            projectsComp
+            projectsComp,
         },
         methods:{
             scrollToProjects(){
@@ -33,10 +33,10 @@ import projectsComp from '@/components/projectsComp.vue'
     margin: 0 auto;
     background: white;
     padding-bottom: 5rem;
+
 }
 .main-wrapper{
-    background: linear-gradient(white, rgb(92, 104, 136));
-
+    background: linear-gradient( #333550, rgb(214, 214, 214));
     height: 100%;
 }
 @media only screen and (max-width: 500px) {
