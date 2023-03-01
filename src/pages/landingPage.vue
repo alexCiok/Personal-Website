@@ -29,7 +29,8 @@ import projectsComp from '@/components/projectsComp.vue'
 
 <style local>
 .main{
-    width: 70%;
+    width: 85%;
+    max-width: 1000px;
     margin: 0 auto;
     background: white;
     padding-bottom: 5rem;
@@ -39,7 +40,7 @@ import projectsComp from '@/components/projectsComp.vue'
     background: linear-gradient( #333550, rgb(214, 214, 214));
     height: 100%;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 769px) {
     .main{
       width: 100%;
     }

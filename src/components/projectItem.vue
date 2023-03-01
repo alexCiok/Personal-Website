@@ -89,8 +89,6 @@ a.button {
 }
 a.button:hover{
     opacity: 0.9;
-    border:1px solid black;
-    margin: 2rem -2px;
 }
 
 </style>
