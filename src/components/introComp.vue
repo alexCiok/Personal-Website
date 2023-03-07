@@ -1,20 +1,29 @@
 <template>
-    <div class="container">
-        <h2 class="header welcome">Welcome to</h2>
-        <h1 class="header">alexciok.ca</h1>
-        <!-- <h2>Rise above <br>the competition</h2> -->
+    <div class="container" 
+    v-motion-fade>
+    <nav>
+            <h2 class="header welcome" 
+            :enter="{opacity: 1, x:0, scale: 1}"
+            :visible="{opacity: 1, x:0, scale: 1}"
+            ><span>Welcome to </span></h2>
+            <h1 class="header" v-motion-slide-left v-motion-slide-visible-left><span>alexciok.ca</span></h1>
+    </nav>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'introComp'
-    }
+        name: 'introComp',
+        components:{
+        },
+        methods:{
+        }
+}
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 .container{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -23,34 +32,53 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
+    overflow: hidden;
+
 }
 .header{
-    justify-content: center;
-    margin: 0vh auto min(1vw,3rem) auto;
-    align-items: center;
     color: rgba(17, 13, 13, 0.9);
+    font-weight: 800;
+    overflow: hidden;
     text-transform: uppercase;
     letter-spacing: .125ch;
-}
-h1,h2{
-    font-family: 'Open Sans', sans-serif;
-}
-h1{
-    font-size: min(8vw, 4rem);
-}
-h2{
-    font-size: min(8vw, 4rem);
-}
-.welcome{
-    margin-top: 10vh;
-    margin-left: 20vw;
+    margin: 0 auto;
+    transition-duration: 300ms;
 }
 .header:hover{
     cursor: default;
 }
+.show{
+    opacity: 1;
+}
+h1,h2{
+    font-family: 'Open Sans', sans-serif;
+}
+h2{
+    font-size: min(8vw, 5rem);
+}
+h1{
+    font-size: min(8vw, 5rem);
+}
+.welcome{
+    margin-top: 10vh;
+    margin: 10vh 10vw 0 10vw;
+}
+
 @media (max-width: 670px){
     .container{
         padding-top: 15vh;
     }
+    .header{
+        margin: 0 auto;
+    }
+    h2{
+        animation: from-above 500ms ease-in forwards;
+    }
+    h1{
+        opacity: 0;
+        animation: from-above 800ms ease-in forwards;
+        animation-delay: 300ms;
+    }
 }
+
 </style>

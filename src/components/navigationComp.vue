@@ -1,24 +1,36 @@
 <template>
     <div class="nav-container">
         <div class="logo">
-            <router-link to="/">
-                <img src="../assets/sample_logo.png" alt="">
+            <router-link to="/" @click="this.$emit('scroll2Home')">
+                <img src="../assets/signature-logo2.png" alt="">
             </router-link>
         </div>
         <div class="links space-evenly">
-            <a @click.prevent="handleLinks('home')" 
-                :class="{active: homeActive}">Home</a>
-            <a @click.prevent="handleLinks('about')"
-                :class="{active: aboutActive}">About</a>
-            <a @click.prevent="handleLinks('projects')"
-                :class="{active: projectsActive}">Projects</a>
+            <a class="hover-this"
+                @click="this.$emit('scroll2About')"
+                :class="{active: aboutActive}">
+                <span>About</span>
+            </a>
+            <a class="hover-this"
+                @click="this.$emit('scroll2Projects')"
+                :class="{active: projectsActive}">
+                <span>Projects</span>
+            </a>
+            <a class="hover-this" 
+                @click="this.$emit('scroll2Contact')"
+                :class="{active: aboutActive}">
+                <span>Contact</span>
+            </a>
+            <div class="cursor"></div>
         </div>
     </div>
 </template>
 
 <script>
+
     export default {
         name: 'navigationComp',
+        emits:['scroll2Projects'],
         data(){
             return({
                 homeActive: false,
@@ -47,8 +59,9 @@
                     this.aboutActive = false;
                 }
             }
-        }
-    }
+        },
+        
+}
 </script>
 
 <style scoped>
@@ -61,6 +74,30 @@
     background-color: rgb(0, 0, 0);
     padding: 0 2vw 0 3vw;
 }
+.hover-this {
+  transition: all 0.3s ease;
+}
+span{
+  font-weight: 400;
+  color: #fff;
+  font-size: 36px;
+  pointer-events: none;
+  transition: transform 0.1s linear;
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 0.35rem;
+  background-color: #ebe6e6;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: transform 0.2s ease;
+}
+
+.hover-this:hover ~ .cursor {
+  transform: translate(-50%, -50%) scale(8);
+}
 .active{
     color: rgb(139, 253, 225);
 }
@@ -70,10 +107,18 @@
 }
 img{
     height: 5vh;
+    border-radius: 50%;
+    border: 2px solid black;
 }
-a{
+img:hover{
+    border: none;
+}
+a, span{
     color: white;
+    font-family: 'Open-Sans', sans-serif;
     text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 a:hover{
     text-decoration: underline;
@@ -85,12 +130,11 @@ a:hover{
     justify-content: space-evenly;
 }
 .space-around {
-
     display: flex;
-
     justify-content: space-around;
 }
 .space-between{
     justify-content: space-between;
 }
+
 </style>

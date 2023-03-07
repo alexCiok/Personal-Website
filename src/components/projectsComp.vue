@@ -1,10 +1,12 @@
 <template>
     <div>
-        <h1 class="head" ref="projects">Projects</h1>
+        <h1 class="head" ref="projects" v-motion-fade-visible-once>Projects</h1>
 
         <div class="grid main-container">
-            <div class="" v-for="project in projects" :key="project.projectName">
-                <projectItem
+            <div class="project" v-for="project in projects" 
+            :key="project.projectName"
+            >
+                <projectItem 
                 :projectName="project.projectName"
                 :skillsUsed="project.skillsUsed"
                 :imageURL="project.projectMedia"
@@ -50,6 +52,15 @@ export default {
     display: grid;
     gap: 2em 0;
     grid-template-columns:  repeat(auto-fit, minmax(450px, 1fr));
+}
+.project:nth-child(2){
+    transition-delay: 400ms;
+}
+.project:nth-child(3){
+    transition-delay: 800ms;
+}
+.project:nth-child(4){
+    transition-delay: 1200ms;
 }
 @media (max-width: 55em){
     .grid{
