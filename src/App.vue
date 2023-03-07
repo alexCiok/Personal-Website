@@ -1,31 +1,26 @@
 <template>
-  <navigationComp/>
-  <introComp></introComp>
   <router-view
   ></router-view>
 </template>
 
 <script>
-import introComp from '@/components/introComp.vue'
 
-import navigationComp from '@/components/navigationComp.vue';
 export default {
   name: 'App',
   components: {
-    navigationComp,
-    introComp,
   },
   data(){
     return({
      
     })
   },
-  
- 
+  methods:{
+  },
 }
 </script>
 
-<style>
+<style global>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
 html{scroll-behavior:smooth}
 
 *,*:before,*:after{

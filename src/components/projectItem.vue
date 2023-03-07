@@ -1,10 +1,10 @@
 <template>
-    <div class="project-container">
-                <div class="project-item header">
+    <div class="project-container" >
+                <div class="project-item header" v-motion-slide-visible-right>
                     <h1 class="project-title"> {{projectName}} </h1>
                     <h2 class="skills-used"> {{ skillsUsed }}</h2>
                 </div>
-                <div class="project-item" v-if="isVideo">
+                <div class="project-item" v-if="isVideo" >
                     <embed class="project-img" :src="imageURL" allowfullscreen frameborder="0"/>
                 </div>
                 <div class="project-item" v-else>
@@ -17,11 +17,12 @@
                         <b>{{projectName}}</b>{{projectDescription}}
                     </p>
                 </div>
-                <div class="project-item">
+                <div class="project-item ">
                     <a :href="codeLink" target="_blank" class="button">
-                        View Code
+                        <span>View Code</span>
                     </a>
                 </div>
+                
             </div>
 </template>
 
