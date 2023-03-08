@@ -7,7 +7,7 @@
                 <img src="../assets/HeadShot.jpg" alt="">
             </div>
             <p class="hook">A freelance developer helping <b>you</b> 
-                make an impact in your field</p>
+                make an impact in your field.</p>
             <button class="call" @click="this.$emit('scroll2Projects')">
                 Check out my work
             </button>
@@ -35,7 +35,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    height: 84vh;
+    height: 90vh;
 }
 #largeScreen{
     transition-duration: 500ms;
@@ -53,6 +53,8 @@ h1{
 .hook{
     max-width: 40ch;
     padding: 5ch 0;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 img{
     max-width: 45vw;

@@ -13,6 +13,8 @@
                 :isVideo="project.isVideo"
                 :codeLink="project.codeLink"
                 :projectDescription="project.projectDescription"
+                :receivedAward="project.receivedAward"
+                :awardReceived="project.awardReceived"
                 />
                 </div>
             </div>
@@ -33,9 +35,7 @@ export default {
             })
         },
         methods:{
-            logg(){
-                console.log(this.projects);
-            }
+            
         }
     }
 </script>
@@ -47,6 +47,12 @@ export default {
     text-align: center;
     padding-bottom: 2em;
     font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+.head:hover{
+    cursor: default;
 }
 .grid{
     display: grid;

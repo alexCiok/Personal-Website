@@ -54,10 +54,10 @@ h1,h2{
     font-family: 'Open Sans', sans-serif;
 }
 h2{
-    font-size: min(8vw, 5rem);
+    font-size: min(8vw, 4rem);
 }
 h1{
-    font-size: min(8vw, 5rem);
+    font-size: min(8vw, 4rem);
 }
 .welcome{
     margin-top: 10vh;

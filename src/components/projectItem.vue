@@ -16,6 +16,10 @@
                     <p class="project-description">
                         <b>{{projectName}}</b>{{projectDescription}}
                     </p>
+                    <p class="project-description award" v-if="receivedAward">
+                        Awarded <b>{{ awardReceived[0] }} place </b>
+                        at {{ awardReceived[1] }}
+                    </p>
                 </div>
                 <div class="project-item ">
                     <a :href="codeLink" target="_blank" class="button">
@@ -30,7 +34,14 @@
     export default {
         name:'projectItem',
         props:
-        ['projectName','imageURL','projectDescription','codeLink','isVideo','skillsUsed']
+        ['projectName',
+        'imageURL',
+        'projectDescription',
+        'codeLink',
+        'isVideo',
+        'skillsUsed',
+        'receivedAward',
+        'awardReceived']
     }
 </script>
 
@@ -54,6 +65,9 @@
     max-width: 90%;
     margin: 0 auto;
 
+}
+.project-description.award{
+    margin-top: 2ch;
 }
 .project-title{
     font-size: 2.3rem;

@@ -68,6 +68,7 @@
 .nav-container{
     display: flex;
     height: 10vh;
+    min-height: 80px;
     position: sticky;
     align-items: center;
     color: white;
@@ -94,9 +95,8 @@ span{
   mix-blend-mode: difference;
   transition: transform 0.2s ease;
 }
-
 .hover-this:hover ~ .cursor {
-  transform: translate(-50%, -50%) scale(8);
+  transform: translate(-50%, -50%) scale(6.5);
 }
 .active{
     color: rgb(139, 253, 225);
@@ -106,8 +106,9 @@ span{
     margin: 0 auto;
 }
 img{
+    min-height: 50px;
     height: 5vh;
-    border-radius: 50%;
+    border-radius: 30%;
     border: 2px solid black;
 }
 img:hover{
