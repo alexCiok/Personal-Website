@@ -12,7 +12,7 @@
                 Check out my work
             </button>
         </div>
-        <div class="right" id="largeScreen"  v-motion-pop-visible-once>
+        <div class="right" id="largeScreen"  v-motion-pop-visible>
             <img src="../assets/HeadShot.jpg" alt="">
         </div>
     </div>
@@ -52,13 +52,14 @@ h1{
 }
 .hook{
     max-width: 40ch;
-    padding: 5ch 0;
+    padding: 5ch 1.5ch;
     font-size: 1.5rem;
     font-weight: 400;
 }
 img{
-    max-width: 45vw;
-    max-height: 50vh;
+    max-width: 35vw;
+    max-height: 40vh;
+    padding-right: 1.5ch;
     border-radius: 50%;
 }
 .call{

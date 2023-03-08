@@ -1,5 +1,5 @@
 <template>
-    <div class="project-container" >
+    <div class="project-container">
                 <div class="project-item header" v-motion-slide-visible-right>
                     <h1 class="project-title"> {{projectName}} </h1>
                     <h2 class="skills-used"> {{ skillsUsed }}</h2>
@@ -21,7 +21,7 @@
                         at {{ awardReceived[1] }}
                     </p>
                 </div>
-                <div class="project-item ">
+                <div class="project-item link">
                     <a :href="codeLink" target="_blank" class="button">
                         <span>View Code</span>
                     </a>
@@ -89,6 +89,10 @@
     margin: 0 15%;
     text-align: left;
 }
+.link{
+    position: relative;
+    bottom: 0px;
+}
 
 a.button {
     -webkit-appearance: button;
@@ -105,5 +109,4 @@ a.button {
 a.button:hover{
     opacity: 0.9;
 }
-
 </style>

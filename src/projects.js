@@ -3,10 +3,10 @@ export let projects = [
     projectName: 'ChatGP',
     skillsUsed: 'Vue | OpenAI | Fullstack',
     isVideo: true,
-    receivedAward: true,
-    projectMedia: 'https://www.youtube.com/embed/X0u2ZxM6Dcg',
+    // receivedAward: true,
+    projectMedia: 'https://www.youtube.com/embed/EgdWQ18eBhM',
     projectDescription: ' is a GPT3-powered virtual general practicioner that helps patients understand their blood results.',
-    awardReceived: ["1st", "SFU's March Madness 2023"],
+    // awardReceived: ["1st", "SFU's March Madness 2023"],
     codeLink: 'https://github.com/alexCiok/chatgp'
 },
 {
@@ -26,7 +26,7 @@ export let projects = [
     receivedAward: true,
     projectMedia: 'https://www.youtube.com/embed/X0u2ZxM6Dcg',
     projectDescription: " is a TensorFlow model developed to decode EEG activity of patients suffering from Locked-in-Syndrome.",
-    awardReceived: ["2nd", "NATHacks 2022"],
+    awardReceived: ["2nd", "University of Alberta NATHacks 2022"],
     codeLink: 'https://github.com/foximler/natHacks-2022'
 },
 {

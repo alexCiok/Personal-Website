@@ -1,13 +1,19 @@
 <template>
     <div>
         <h1>Let's Talk</h1>
-            <form @submit=submitMsg class="flex" action="">
+            <form @submit=submitMsg action="https://formsubmit.co/acciok@gmail.com" method="POST">
                 <div class="form-group top">
-                    <input type="text" name="name" id="name">
-                    <input type="email" name="email" id="email">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        <div class="col">
+                            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group bottom">
-                    <input type="text" name="message" id="message">
+                <div class="form-group">
+                    <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
                 </div>
                 <button>Send</button>
             </form>
