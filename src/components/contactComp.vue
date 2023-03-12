@@ -1,12 +1,13 @@
 <template>
     <div class="container">
         <h1>Contact Me</h1>
-            <form @submit=submitMsg action="https://formsubmit.co/acciok@gmail.com" method="POST">
+            <form action="https://formsubmit.co/741c0fa84f5ae40415ad3910ee2480ae" method="POST">
                 <div class="form-group">
                     <input type="text" name="name" class="form-control" placeholder="Full Name" required>
                     <input type="email" name="email" class="form-control" placeholder="Email Address" required _replyto>
                 </div>
                 <div class="form-group">
+                    <input type="hidden" name="_next" value="http://localhost:8080/submit">
                     <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
                 </div>
                 <button>Send</button>
@@ -29,8 +30,8 @@
 .container{
     width: 100%;
     height: 80vh;
-    margin-top: 10vh;
-    padding-bottom: 10vh;
+    margin-top: 15vh;
+    padding: 5vh 0;
     border-top: 2px solid rgb(0, 0, 0);;
 }
 h1{
@@ -59,7 +60,6 @@ textarea,input{
     border-radius: 6px;
     padding: 1ch 1ch;
     margin: 1ch 0%;
-
 }
 
 .container{
@@ -89,7 +89,7 @@ button:hover{
         background-color:  #b7bfc3;
     }
     100%{
-        background-color:  #96c9f3;
+        background-color:  #b6cfe4;
     }
 }
 </style>

@@ -89,11 +89,11 @@
     margin: 0 15%;
     text-align: left;
 }
-.link{
-    position: relative;
-    bottom: 0px;
+@-moz-document url-prefix() {
+    .project-description{
+        margin-bottom: 2ch;
+    }
 }
-
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
@@ -104,7 +104,7 @@ a.button {
     background-color: rgb(91, 204, 204);
     padding: 0.75ch 1.5ch;
     border-radius: 6px;
-    margin: 2rem;
+    margin-top: 2rem;
 }
 a.button:hover{
     opacity: 0.9;
