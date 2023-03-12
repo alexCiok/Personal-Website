@@ -94,7 +94,6 @@ import navigationComp from '@/components/navigationComp.vue';
     max-width: 1000px;
     margin: 0 auto;
     background: white;
-    padding-bottom: 5rem;
 }
 #navigation{
     position: sticky;
