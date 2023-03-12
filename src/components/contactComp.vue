@@ -86,10 +86,10 @@ button:hover{
 }
 @keyframes pulse{
     0% {
-        background-color:  #8bb7cb;
+        background-color:  #b7bfc3;
     }
     100%{
-        background-color:  #62afef;
+        background-color:  #96c9f3;
     }
 }
 </style>
